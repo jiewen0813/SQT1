@@ -1,0 +1,21 @@
+CREATE TABLE challenge (
+ch_id INT PRIMARY KEY AUTO_INCREMENT,
+studentID VARCHAR(50),
+sem INT(3),
+year VARCHAR(10),
+challenge TEXT,
+remark TEXT,
+img_path VARCHAR(20),
+FOREIGN KEY (studentID) REFERENCES user(studentID)
+);
+
+CREATE TABLE activities (
+ac_id INT PRIMARY KEY AUTO_INCREMENT,
+studentID VARCHAR(50),
+sem INT(3),
+year VARCHAR(10),
+activities TEXT,
+position TEXT,
+img_path VARCHAR(20),
+FOREIGN KEY (studentID) REFERENCES user(studentID)
+);
